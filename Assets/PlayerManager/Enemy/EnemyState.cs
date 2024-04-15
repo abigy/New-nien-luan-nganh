@@ -8,6 +8,8 @@ public class EnemyState : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     public HealBarEnemy healthBarEnemy;
+    public AudioClip dameSound;
+    private AudioSource takeDameAudio;
 
     Collider enemyCollider;
 
@@ -15,6 +17,7 @@ public class EnemyState : MonoBehaviour
 
     private void Awake()
     {
+        takeDameAudio = GetComponent<AudioSource>();
         animator = GetComponentInChildren<Animator>();
     }
     void Start()
@@ -36,6 +39,7 @@ public class EnemyState : MonoBehaviour
         currentHealth -= dame;
         healthBarEnemy.SetCurrentHealth_Enemy(currentHealth);
         animator.Play("Dealing");
+        takeDameAudio.PlayOneShot(dameSound,1.0f);
 
         if (currentHealth <= 0)
         {
