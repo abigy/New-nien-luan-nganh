@@ -4333,7 +4333,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1335457130055421840, guid: d1872dbf85e16a74a8aa11487dbffb3e, type: 3}
       propertyPath: m_Drag
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1335457130055421841, guid: d1872dbf85e16a74a8aa11487dbffb3e, type: 3}
       propertyPath: dash_pos
